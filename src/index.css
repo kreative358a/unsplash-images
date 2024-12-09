@@ -20,7 +20,8 @@ body::-webkit-scrollbar {
 
 :root {
   /* colors */
-  --primary-100: #e2e0ff;
+  --primary-100: rgb(226, 224, 255);
+  --primary-100-transparent: rgb(226, 224, 255, 0.94);
   --primary-200: #c1beff;
   --primary-300: #a29dff;
   --primary-400: #837dff;
@@ -28,7 +29,7 @@ body::-webkit-scrollbar {
   --primary-600: #504acc;
   --primary-700: #3c3799;
   --primary-800: #282566;
-  --primary-900: #141233;
+  --primary-900: rgb(20, 18, 51);
   --primary-950: #070713;
 
   /* grey */
@@ -70,12 +71,14 @@ body::-webkit-scrollbar {
   --dark-mode-box-shadow: 0 4px 8px 0 rgba(140, 140, 140, 0.2),
     0 6px 20px 0 rgba(140, 140, 140, 0.19);
   /* dark mode setup */
-  --dark-mode-bg-color: #070713;
+  --dark-mode-bg-color: rgb(5, 10, 30);
+  --dark-mode-bg-color-transparent: rgba(5, 10, 30, 0.94);
+  --backgroundColor-transparent: var(--primary-100-transparent);
   --dark-mode-text-color: #f0f0f0;
-  --backgroundColor: var(--primary-50);
+  --backgroundColor: var(--primary-100);
   --textColor: var(--primary-900);
   /* --dark-mode-transition: var(--transition) */
-  --darkModeTransition: color 0.3s ease-in-out,
+  --darkModeTransition: color 0.3s ease-in-out
     background-color 0.3s ease-in-out;
   --boxShadow: 0 4px 8px 0 rgba(40, 40, 40, 0.2),
     0 6px 20px 0 rgba(40, 40, 40, 0.19);
@@ -92,6 +95,7 @@ body::-webkit-scrollbar {
   --textColor: var(--dark-mode-text-color);
   --backgroundColor: var(--dark-mode-bg-color);
   --boxShadow: var(--dark-mode-box-shadow);
+  --backgroundColor-transparent: var(--dark-mode-bg-color-transparent)
 }
 
 body {
@@ -899,4 +903,25 @@ div.SRLThumbnailsContainer {
 .embla__dot.is-selected:after {
   background-color: #0866ff;
   opacity: 1;
+}
+
+
+.yarl__container {
+  background-color: var(--backgroundColor-transparent);
+}
+
+.yarl__thumbnails_container {
+  background-color: var(--backgroundColor);
+  background: var(--backgroundColor);
+}
+
+.yarl__thumbnails_bottom .yarl__thumbnails_vignette,
+.yarl__thumbnails_vignette {
+  background: transparent;
+}
+
+.yarl__toolbar > button > svg > g {
+  /* fill: var(--font-color); */
+  /* stroke: var(--textColor); */
+  fill: var(--textColor);
 }

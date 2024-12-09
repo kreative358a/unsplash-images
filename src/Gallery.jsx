@@ -2,13 +2,12 @@ import { useQuery } from "@tanstack/react-query";
 import axios from "axios";
 import { useGlobalContext } from "./context";
 import { useState } from "react";
+import Inline from "yet-another-react-lightbox/plugins/inline";
 import Lightbox from "yet-another-react-lightbox";
 import Fullscreen from "yet-another-react-lightbox/plugins/fullscreen";
-import Inline from "yet-another-react-lightbox/plugins/inline";
 import Slideshow from "yet-another-react-lightbox/plugins/slideshow";
 import Thumbnails from "yet-another-react-lightbox/plugins/thumbnails";
 import Zoom from "yet-another-react-lightbox/plugins/zoom";
-import "yet-another-react-lightbox/plugins/thumbnails.css";
 import Download from "yet-another-react-lightbox/plugins/download";
 import "yet-another-react-lightbox/plugins/thumbnails.css";
 import "yet-another-react-lightbox/styles.css";
@@ -67,7 +66,7 @@ const Gallery = () => {
     );
   }
 
-
+console.log(results);
 const slides = results.map((item, index) => {
   
 })
